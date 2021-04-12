@@ -8,12 +8,20 @@ namespace OoP_LAB_5
     {
         public override Biurko WyprodukujBiurko(int limitCeny)
         {
-            return null;
+            BiurkoStalowe biurko = new BiurkoStalowe("White", 300);
+            if (biurko.Price > limitCeny)
+                return null;
+            else
+                return biurko;
         }
 
         public override Szafa WyprodukujSzafe(int limitCeny)
         {
-            return null;
+            SzafaTrojka szafa = new SzafaTrojka("White", 252);
+            if (szafa.Price > limitCeny)
+                return null;
+            else
+                return szafa;
         }
     }
 }
